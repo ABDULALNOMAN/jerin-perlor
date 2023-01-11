@@ -24,10 +24,6 @@ const router = createBrowserRouter([
                 path: '/signup',
                 element:<Singup></Singup>
             },
-            {
-                path: '/pizzaSlice',
-                element:<PizzaSlice></PizzaSlice>
-            }
         ])
     }
 ])
