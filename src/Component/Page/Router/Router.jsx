@@ -5,7 +5,6 @@ import Login from "../authentication/Login";
 import Singup from "../authentication/Singup";
 import Home from "../Home/Home";
 import Main from "../Layout/Main";
-import PizzaSlice from "../PizzaSlice/PizzaSlice";
 
 const router = createBrowserRouter([
     {
