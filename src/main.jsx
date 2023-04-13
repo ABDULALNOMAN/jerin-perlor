@@ -2,13 +2,14 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
-import {Provider} from 'react-redux'
-import { store } from './Component/Page/Redux/Store'
+import Contexting from './Component/Contexting/Contexting'
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <Provider store={store}>
+      <Contexting>
         <App />
-      </Provider>
+      </Contexting>
   </React.StrictMode>
 )

@@ -1,17 +1,34 @@
 import React from 'react';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper";
+import "./Testimonial.css"
+import testimonial from "../../../Json/Testimonial.json"
+import TestimonialItem from './TestimonialItem';
 
 const Testimonial = () => {
     return (
-        <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
-  <div className="card-body">
-    <h2 className="card-title">Card title!</h2>
-    <p>If a dog chews shoes whose shoes does he choose?</p>
-    <div className="card-actions justify-end">
-      <button className="btn btn-primary">Buy Now</button>
-    </div>
-  </div>
-</div>
+        <div className='my-20 '>
+          <h2 className='text-4xl text-center font-bold mb-12'>Testimonial</h2>
+          <div className='max-h-60 w-11/12 m-auto'>
+            <Swiper
+                slidesPerView={3}
+                spaceBetween={30}
+                pagination={{
+                  clickable: true,
+
+                }}
+                modules={[Pagination]}
+                className="mySwiper"
+              >
+                <div>{testimonial.map((data)=>(
+                  <SwiperSlide>
+                    <TestimonialItem key={data?.index} data={data}></TestimonialItem>
+                  </SwiperSlide>
+                ))}</div>
+              </Swiper>
+          </div>
         </div>
     );
 };

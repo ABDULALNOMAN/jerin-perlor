@@ -4,7 +4,6 @@ import Hero from './Hero';
 import Information from './Information';
 import Profetionaly from './Profetionaly';
 import Testimonial from './Testimonial';
-import Data from './Data';
 
 const Home = () => {
     return (
@@ -14,7 +13,6 @@ const Home = () => {
             <Profetionaly></Profetionaly>
             <Testimonial></Testimonial>
             <Information></Information>
-            <Data></Data>
         </div>
     );
 };

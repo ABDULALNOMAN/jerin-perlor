@@ -1,16 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components{
+  .btn-style{
+    @apply btn bg-primaryColor border-none hover:bg-primaryColor
+  }
+}
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  max-width: 1440px;
+  margin-inline: auto;
+  position: relative;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #ffffff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

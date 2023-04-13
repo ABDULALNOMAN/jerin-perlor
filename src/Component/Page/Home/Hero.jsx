@@ -1,17 +1,20 @@
 import React from 'react';
+import heroImg from '../../../assets/images/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept 1.png'
 
 const Hero = () => {
     return (
-        <div className="hero min-h-screen bg-base-200">
-  <div className="hero-content flex-col lg:flex-row-reverse">
-    <img src="https://placeimg.com/260/400/arch" className="max-w-sm rounded-lg shadow-2xl" />
-    <div>
-      <h1 className="text-5xl font-bold">Box Office News!</h1>
-      <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-      <button className="btn btn-primary">Get Started</button>
-    </div>
-  </div>
-</div>
+        <div className="bg-white">
+            <div className="flex items-center justify-around flex-row-reverse min-h-screen w-11/12 mx-auto">
+               <div className='w-full flex justify-center'>
+                  <img src={heroImg} className="rounded-lg w-8/12 shadow-2xl " />
+               </div>
+               <div className='w-full '>
+                  <h1 className="text-6xl  font-bold leading-tight">BEAUTY SALON <br/> FOR EVERY WOMEN</h1>
+                  <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                  <button className="btn-style">Get an Appointment</button>
+               </div>
+            </div>
+        </div>
     );
 };
 
