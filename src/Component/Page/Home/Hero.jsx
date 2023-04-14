@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import heroImg from '../../../assets/images/beautiful-young-asian-woman-touching-her-clean-face-with-fresh-healthy-skin-isolated-white-wall-beauty-cosmetics-facial-treatment-concept 1.png'
+import { callContext } from '../../Contexting/Contexting';
 
 const Hero = () => {
+    const {user} = useContext(callContext)
+    console.log(user)
     return (
         <div className="bg-white">
             <div className="flex items-center justify-around flex-row-reverse min-h-screen w-11/12 mx-auto">
