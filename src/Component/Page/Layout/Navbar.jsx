@@ -17,6 +17,8 @@ const Navbar = () => {
             <li><a>Our Portfolio</a></li>
             <li><a>Our Team</a></li>
             <li><a>Contact Us</a></li>
+            <li><Link to={"/customerdashboard"}>customer</Link></li>
+            <li><Link to={"/admindashborad"}>admin</Link></li>
             <li><Link className='btn-style w-28'>login</Link></li>
         </>
     

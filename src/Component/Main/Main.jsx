@@ -15,7 +15,7 @@ function Main() {
         })
         .catch(error=>console.log(error))
     }
-    if(user.uid){
+    if(user?.uid){
         navigate("/home")
     }
 

@@ -1,16 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { FiMenu } from 'react-icons/fi';
+import { callContext } from '../../Contexting/Contexting';
 
 function DashboardNavbar() {
+    const {change,user} = useContext(callContext)
   return (
     <div>
-        <div className="navbar bg-base-100">
+        <div className="navbar w-11/12 mx-auto ">
             <div className="flex-1">
-                <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                <h3 className="text-xl font-semibold italic uppercase">{change}</h3>
             </div>
-            <div className="flex-none">
-                <button className="btn btn-square btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
-                </button>
+            <div className="">
+                <h3 className='lg:block hidden text-xl cursor-pointer'>{user?.displayName}</h3>
+                <label htmlFor="my-drawer-2" className=" drawer-button lg:hidden">
+                    <FiMenu className=" w-8 h-8"></FiMenu>
+                </label>
             </div>
             </div>
     </div>

@@ -9,6 +9,7 @@ const auth = getAuth(app)
 const provider = new GoogleAuthProvider()
 
 const Contexting = ({ children }) => {
+    const[change ,setChange] = useState("")
     const [user , setUser] = useState({})
     const handleRegister = (email, password) => {
         return createUserWithEmailAndPassword(auth,email,password)
@@ -27,7 +28,7 @@ const Contexting = ({ children }) => {
     const logOut = () => {
         return signOut(auth)
     }
-    const value = {handleRegister,user,logOut,handleGoogleAuth}
+    const value = {handleRegister,user,logOut,handleGoogleAuth,change,setChange}
     return (
         <div>
             <callContext.Provider value={value}>

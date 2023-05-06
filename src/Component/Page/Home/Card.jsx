@@ -1,7 +1,20 @@
-import React from 'react';
-import cardItem from '../../../Json/CardItem.json'
+import React, { useEffect, useState } from 'react';
 
 const Card = () => {
+    const [cardItem ,useCardItem] = useState([])
+    useEffect(()=>{
+       async function cardItemFunc (){
+            try{
+                const res = await fetch("http://localhost:5000/carditem")
+                const data = await res.json()
+                useCardItem(data)
+            }
+            catch(error){
+                console.log(error)
+            }
+        }
+        cardItemFunc()
+    },[])
     return (
         <div>
             <div className='text-center'>

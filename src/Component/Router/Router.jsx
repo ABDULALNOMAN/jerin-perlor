@@ -11,6 +11,7 @@ import Book from "../Page/Customer/Book";
 import Review from "../Page/Customer/Review";
 import ServiceList from "../Page/Customer/ServiceList";
 import Home from "../Page/Home/Home";
+import Error from "../Page/Error";
 
 const router = createBrowserRouter([
     {
@@ -41,7 +42,8 @@ const router = createBrowserRouter([
             },
             {
                 path:"/customerdashboard/servicelist",
-                element:<ServiceList></ServiceList>
+                element:<ServiceList></ServiceList>,
+                loader:(()=> fetch("http://localhost:5000/service"))
             },
             {
                 path:"/customerdashboard/review",
@@ -67,6 +69,10 @@ const router = createBrowserRouter([
             }
         ])
     },
+    {
+        path:"*",
+        element:<Error></Error>
+    }
 
     
     
